@@ -25,7 +25,6 @@
 .project-card-media { aspect-ratio: 4 / 5; }
 .project-card-body { padding-top: 16px; }
 .project-card .card-title { margin: 2px 0 2px; }
-.media-badge { position: absolute; top: 14px; inset-inline-end: 14px; width: 34px; height: 34px; display: flex; align-items: center; justify-content: center; background: var(--white); color: var(--ink); }
 
 /* Testimonial card */
 .testimonial-card { height: 100%; margin: 0; background: var(--white); border: 1px solid var(--line); padding: 28px; display: flex; flex-direction: column; }

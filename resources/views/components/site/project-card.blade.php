@@ -2,10 +2,7 @@
 
 <article class="project-card">
     <a href="{{ $project->url() }}" class="project-card-media">
-        <x-site.media :media="$project->cover" thumb video="poster" :alt="$project->tr('title')" />
-        @if ($project->coverIsVideo())
-            <span class="media-badge"><x-icon name="play-fill" :size="12" /></span>
-        @endif
+        <x-site.media :media="$project->cover" thumb video="inview" :alt="$project->tr('title')" />
     </a>
     <div class="project-card-body">
         @if ($project->service)

@@ -14,6 +14,9 @@ class SettingSeeder extends Seeder
 {
     use ImportsMedia;
 
+    /** Setting images taken from the real work photos (index in the media folder). */
+    public const IMAGES = ['about_image' => 10, 'about_image_2' => 31, 'login_image' => 12, 'page_header_image' => 9];
+
     public function run(): void
     {
         $values = [
@@ -113,7 +116,7 @@ class SettingSeeder extends Seeder
             Storage::disk('public')->put($images['favicon'] = 'settings/favicon.png', ob_get_clean());
         }
 
-        foreach (['about_image' => 26, 'about_image_2' => 64, 'login_image' => 178, 'page_header_image' => 49] as $key => $index) {
+        foreach (static::IMAGES as $key => $index) {
             if ($stored = $this->image($index, 'settings')) {
                 $images[$key] = $stored['path'];
                 $media->delete(['path' => $stored['thumb']]);

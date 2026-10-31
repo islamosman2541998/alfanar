@@ -3,7 +3,8 @@
 {{--
     Renders a cover array {type, path, thumb, poster} or a Media model.
     thumb:  use the card-size image
-    video:  inline (muted autoplay loop) | controls | poster (image only)
+    video:  inline (muted loop, played by the slider) | inview (muted loop, plays while on screen)
+            | controls | poster (image only)
 --}}
 @php
     $m = $media instanceof \App\Models\Media ? $media->only(['type', 'path', 'thumb', 'poster']) : (array) $media;
@@ -18,7 +19,7 @@
         <video {{ $attributes->merge(['class' => 'media-el']) }}
                @if ($poster) poster="{{ $poster }}" @endif
                playsinline muted
-               @if ($video === 'controls') controls preload="metadata" @else loop preload="{{ $eager ? 'auto' : 'none' }}" @if ($eager) autoplay @endif data-autoplay @endif>
+               @if ($video === 'controls') controls preload="metadata" @else loop preload="{{ $eager ? 'auto' : 'none' }}" @if ($eager) autoplay @endif @if ($video === 'inview') data-inview @endif @endif>
             <source src="{{ $full }}{{ $poster ? '' : '#t=0.5' }}" type="video/{{ pathinfo($full, PATHINFO_EXTENSION) === 'webm' ? 'webm' : 'mp4' }}">
         </video>
     @elseif ($isVideo)
