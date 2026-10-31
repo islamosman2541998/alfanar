@@ -28,7 +28,8 @@ if (! function_exists('media_url')) {
             return null;
         }
 
-        return str_starts_with($path, 'http') ? $path : Storage::disk('public')->url($path);
+        // asset() follows the domain the site is opened from, so files load even if APP_URL is wrong.
+        return str_starts_with($path, 'http') ? $path : asset('storage/'.ltrim($path, '/'));
     }
 }
 

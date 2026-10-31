@@ -26,6 +26,9 @@ return Application::configure(basePath: dirname(__DIR__))
             'admin.locale' => SetAdminLocale::class,
         ]);
 
+        // Hosting SSL terminates at the proxy (LiteSpeed / Cloudflare): read the real scheme from it.
+        $middleware->trustProxies(at: '*');
+
         $middleware->redirectGuestsTo(fn () => route('admin.login'));
         $middleware->redirectUsersTo(fn () => route('admin.dashboard'));
     })
