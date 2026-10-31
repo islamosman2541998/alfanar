@@ -1,0 +1,15 @@
+@import 'swiper/css';
+@import 'swiper/css/effect-fade';
+@import 'glightbox/dist/css/glightbox.min.css';
+@import './shared/notify.css';
+
+@import './site/tokens.css';
+@import './site/base.css';
+@import './site/preloader.css';
+@import './site/header.css';
+@import './site/hero.css';
+@import './site/cards.css';
+@import './site/sections.css';
+@import './site/pages.css';
+@import './site/footer.css';
+@import './site/motion.css';

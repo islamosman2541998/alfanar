@@ -1,0 +1,14 @@
+/* SweetAlert2 confirmations themed to the brand */
+.swal2-container { font-family: var(--font-body); }
+.swal-brand.swal2-popup {
+    border-radius: 10px;
+    padding: 28px 24px 24px;
+    width: 400px;
+    max-width: calc(100vw - 32px);
+}
+.swal-brand .swal2-title { font-size: 19px; font-weight: 700; color: var(--dark); padding-top: 8px; font-family: var(--font-head); }
+.swal-brand .swal2-html-container { font-size: 14.5px; color: var(--muted); margin-top: 8px; }
+.swal-brand .swal2-icon { transform: scale(.8); margin: 8px auto 0; }
+.swal-brand .swal2-icon.swal2-warning { border-color: var(--brand); color: var(--brand); }
+.swal-brand .swal2-actions { margin-top: 22px; }
+.swal-brand .swal2-actions .btn { min-width: 110px; }

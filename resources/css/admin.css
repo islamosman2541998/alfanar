@@ -1,0 +1,7 @@
+@import 'bootstrap-icons/font/bootstrap-icons.min.css';
+@import './shared/notify.css';
+@import './admin/base.css';
+@import './admin/layout.css';
+@import './admin/components.css';
+@import './admin/login.css';
+@import './admin/swal.css';

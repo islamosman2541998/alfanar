@@ -1,0 +1,21 @@
+.site-footer { background: #171614; color: rgba(255, 255, 255, .66); font-size: 14.5px; }
+.footer-top { padding-block: clamp(52px, 6vw, 80px) 44px; }
+.brand--footer .brand-text strong { color: var(--white); }
+.brand--footer .brand-text small { color: rgba(255, 255, 255, .55); }
+.brand--footer img { width: 60px; height: 60px; }
+.footer-about { margin: 20px 0 22px; max-width: 360px; line-height: 1.9; }
+.footer-title { color: var(--white); font-size: 16px; margin-bottom: 18px; }
+.footer-links, .footer-contact { list-style: none; padding: 0; margin: 0; }
+.footer-links li + li { margin-top: 10px; }
+.footer-links a:hover { color: var(--brand); }
+.footer-contact li { display: flex; gap: 12px; align-items: flex-start; }
+.footer-contact li + li { margin-top: 14px; }
+.footer-contact .icon { color: var(--brand); flex-shrink: 0; margin-top: 5px; }
+.footer-contact a:hover { color: var(--brand); }
+
+.social-links { display: flex; gap: 8px; flex-wrap: wrap; }
+.social-links a { width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid var(--line-dark); color: rgba(255, 255, 255, .8); transition: all .3s var(--ease); }
+.social-links a:hover { background: var(--brand); border-color: var(--brand); color: var(--ink); }
+
+.footer-bottom { border-top: 1px solid var(--line-dark); padding-block: 22px; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-size: 13px; }
+.footer-bottom a:hover { color: var(--brand); }

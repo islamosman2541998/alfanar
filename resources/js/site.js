@@ -1,0 +1,21 @@
+import 'bootstrap/js/dist/collapse';
+import 'bootstrap/js/dist/offcanvas';
+import { bootNotify } from './shared/notify';
+import { initPreloader } from './site/preloader';
+import { initHeader } from './site/header';
+import { initSliders } from './site/sliders';
+import { initReveal } from './site/reveal';
+import { initCounters } from './site/counters';
+import { initLightbox } from './site/lightbox';
+import { initFaqSearch } from './site/faq';
+import { initTracking } from './site/tracking';
+
+bootNotify();
+initPreloader();
+initHeader();
+initSliders();
+initReveal();
+initCounters();
+initLightbox();
+initFaqSearch();
+initTracking();

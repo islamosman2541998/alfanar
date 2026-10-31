@@ -1,0 +1,23 @@
+.preloader {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    background: var(--ink);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    transition: opacity .6s var(--ease), visibility .6s;
+}
+.preloader.is-done { opacity: 0; visibility: hidden; }
+body.is-loading { overflow: hidden; }
+
+.preloader-mark { position: relative; width: 120px; height: 120px; display: flex; align-items: center; justify-content: center; }
+.preloader-mark img { width: 84px; height: 84px; border-radius: 50%; object-fit: cover; background: #fff; animation: breathe 1.8s var(--ease) infinite; }
+.preloader-ring { position: absolute; inset: 0; width: 100%; height: 100%; animation: spin 1.4s linear infinite; }
+.preloader-ring circle { fill: none; stroke: rgba(255, 255, 255, .12); stroke-width: 2; }
+.preloader-ring .arc { stroke: var(--brand); stroke-dasharray: 90 352; stroke-linecap: round; }
+.preloader-name { color: rgba(255, 255, 255, .75); font-family: var(--font-head); font-size: 14px; letter-spacing: .5px; }
+
+@keyframes breathe { 0%, 100% { transform: scale(1); } 50% { transform: scale(.94); } }

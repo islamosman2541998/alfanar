@@ -1,0 +1,25 @@
+/* Brand color, dark color and fonts come from Settings (see partials/brand-head) */
+:root {
+    --ink: var(--dark);
+    --stone: #f5f2ec;
+    --stone-2: #ece7dd;
+    --line: #e4ded3;
+    --line-dark: rgba(255, 255, 255, .14);
+    --text: #2a2825;
+    --muted: #6f6a61;
+    --white: #fff;
+
+    --container: 1240px;
+    --header-h: 84px;
+    --section-y: clamp(56px, 7vw, 100px);
+    --ease: cubic-bezier(.22, .61, .36, 1);
+
+    --fs-body: 15px;
+    --fs-small: 13px;
+    --fs-title: clamp(24px, 2.4vw, 34px);
+    --fs-hero: clamp(28px, 4vw, 52px);
+}
+
+@media (max-width: 991.98px) {
+    :root { --header-h: 70px; }
+}

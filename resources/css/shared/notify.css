@@ -1,0 +1,40 @@
+/* Toastr + SweetAlert2 themed to the brand (flat colors, no gradients) */
+@import 'toastr/build/toastr.min.css';
+
+#toast-container > div {
+    opacity: 1;
+    width: 340px;
+    max-width: calc(100vw - 24px);
+    padding: 14px 16px;
+    padding-inline-start: 50px;
+    border-radius: 6px;
+    box-shadow: 0 6px 24px rgba(20, 20, 18, .14);
+    background-position: 16px center;
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #fff;
+}
+
+#toast-container > div:hover { box-shadow: 0 8px 28px rgba(20, 20, 18, .2); }
+#toast-container.toast-top-left > div,
+#toast-container .rtl { background-position: calc(100% - 16px) center; }
+
+/* One solid color per type */
+#toast-container > .toast-success { background-color: #2f9e62; }
+#toast-container > .toast-error { background-color: #d14b38; }
+#toast-container > .toast-warning { background-color: #d9901a; }
+#toast-container > .toast-info { background-color: #3d7ab8; }
+#toast-container .toast-progress { background: #fff; opacity: .25; height: 3px; }
+#toast-container .toast-close-button { color: #fff; text-shadow: none; opacity: .6; font-weight: 400; }
+#toast-container .toast-close-button:hover { opacity: 1; }
+#toast-container.toast-top-left .toast-close-button,
+#toast-container .rtl .toast-close-button { left: -.2em; right: auto; }
+.toast-top-left { top: 16px; left: 16px; }
+.toast-top-right { top: 16px; right: 16px; }
+
+@media (max-width: 575.98px) {
+    #toast-container.toast-top-left,
+    #toast-container.toast-top-right { left: 12px; right: 12px; }
+    #toast-container > div { width: 100%; }
+}

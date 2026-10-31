@@ -1,0 +1,18 @@
+<?php
+
+namespace App\Models;
+
+use App\Models\Concerns\HasPublishing;
+use App\Models\Concerns\HasTranslations;
+use Illuminate\Database\Eloquent\Model;
+
+class Stat extends Model
+{
+    use HasPublishing, HasTranslations;
+
+    protected $fillable = ['label', 'value', 'suffix', 'status', 'sort_order'];
+
+    protected array $translatable = ['label'];
+
+    protected $casts = ['status' => 'boolean', 'value' => 'integer'];
+}
