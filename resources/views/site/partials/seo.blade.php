@@ -26,6 +26,11 @@
 <meta property="og:locale:alternate" content="{{ is_rtl() ? 'en_US' : 'ar_EG' }}">
 @if ($image)
     <meta property="og:image" content="{{ $image }}">
+    <meta property="og:image:secure_url" content="{{ $image }}">
+    @foreach ($seo->imageInfo() as $key => $value)
+        <meta property="og:image:{{ $key }}" content="{{ $value }}">
+    @endforeach
+    <meta property="og:image:alt" content="{{ setting('site_name') }}">
     <meta name="twitter:image" content="{{ $image }}">
 @endif
 <meta name="twitter:card" content="summary_large_image">

@@ -113,10 +113,6 @@ class SettingSeeder extends Seeder
             Storage::disk('public')->put($images['favicon'] = 'settings/favicon.png', ob_get_clean());
         }
 
-        if ($file = $this->images()[178] ?? null) {
-            Storage::disk('public')->put($images['og_image'] = 'settings/og-image.jpg', file_get_contents($file));
-        }
-
         foreach (['about_image' => 26, 'about_image_2' => 64, 'login_image' => 178, 'page_header_image' => 49] as $key => $index) {
             if ($stored = $this->image($index, 'settings')) {
                 $images[$key] = $stored['path'];

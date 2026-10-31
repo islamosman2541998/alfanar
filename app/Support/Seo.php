@@ -61,9 +61,30 @@ class Seo
         return \Illuminate\Support\Str::limit(trim(preg_replace('/\s+/u', ' ', strip_tags($text))), 160, '');
     }
 
+    /** Share image: the page's own image, else the one set in Settings > SEO, else the logo. */
+    public function imagePath(): ?string
+    {
+        return $this->image ?: setting('og_image') ?: setting('logo');
+    }
+
     public function imageUrl(): ?string
     {
-        return media_url($this->image ?: setting('og_image') ?: setting('logo'));
+        return media_url($this->imagePath());
+    }
+
+    /** Width, height and mime of the share image (read from the stored file). */
+    public function imageInfo(): array
+    {
+        $path = $this->imagePath();
+
+        if (! $path || str_starts_with($path, 'http')) {
+            return [];
+        }
+
+        $file = storage_path('app/public/'.$path);
+        $size = is_file($file) ? @getimagesize($file) : false;
+
+        return $size ? ['width' => $size[0], 'height' => $size[1], 'type' => $size['mime']] : [];
     }
 
     /** Business, website and breadcrumb structured data for the current page. */

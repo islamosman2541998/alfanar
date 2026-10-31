@@ -54,7 +54,7 @@ class SettingsSchema
                 ['key' => 'seo_title', 'type' => 'text', 'tr' => true, 'label' => 'Default title', 'hint' => 'Shown in Google results and browser tab (50-60 characters)', 'serp' => true],
                 ['key' => 'seo_description', 'type' => 'textarea', 'tr' => true, 'label' => 'Default description', 'hint' => 'Shown under the title in Google results (120-160 characters)', 'serp' => true],
                 ['key' => 'seo_keywords', 'type' => 'text', 'tr' => true, 'label' => 'Keywords', 'hint' => 'Comma separated'],
-                ['key' => 'og_image', 'type' => 'image', 'label' => 'Share image (Open Graph)', 'hint' => '1200 x 630 shown when the link is shared on Facebook / WhatsApp'],
+                ['key' => 'og_image', 'type' => 'image', 'label' => 'Share image (Open Graph)', 'hint' => 'Shown when the link is shared on WhatsApp / Facebook. Leave empty to use the logo'],
                 ['key' => 'seo_indexing', 'type' => 'toggle', 'label' => 'Allow search engines to index the site'],
                 ['key' => 'google_verification', 'type' => 'text', 'label' => 'Google Search Console verification code'],
                 ['key' => 'bing_verification', 'type' => 'text', 'label' => 'Bing verification code'],

@@ -1,5 +1,5 @@
 {
-    "1200 x 630 shown when the link is shared on Facebook / WhatsApp": "مقاس 1200 × 630، تظهر عند مشاركة الرابط على فيسبوك أو واتساب",
+    "Shown when the link is shared on WhatsApp / Facebook. Leave empty to use the logo": "تظهر عند مشاركة الرابط على واتساب أو فيسبوك. اتركها فارغة لاستخدام اللوجو",
     ":count links added": "تمت إضافة :count روابط",
     ":count media file|:count media files": ":count ملف وسائط|:count ملفات وسائط",
     ":count rows deleted": "تم حذف :count عناصر",
